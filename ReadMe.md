@@ -13,24 +13,23 @@ Through the frontend of the site, the user can input a message, which gets store
 
 ### Installation
 
-1. Install VSCode: [https://code.visualstudio.com/download]
-2. Install NodeJs: [https://nodejs.org/en/download/]
-3. Install PostgreSQL:[https://www.enterprisedb.com/downloads/postgres-postgresql-downloads]
-   Set the password to "testpassword"
-   Run on Port 5432
+1. Install VSCode: https://code.visualstudio.com/download
+2. Install NodeJs: https://nodejs.org/en/download/
+3. Install PostgreSQL: https://www.enterprisedb.com/downloads/postgres-postgresql-downloads. Set the password to "testpassword". 
+Run on Port 5432.
 4. Clone the repo
    `git clone https://github.com/lkillora/MessagingRaspberryPi.git`
 
 ### Database Setup
 
-If, after it’s been installed, and `psql -V` in the terminal returns `psql is not recognized as an internal command`, then Windows cannot find the executables because their location has not been added to the environment variables list. Go to “Edit the system environment variables” > Environment Variables > under “User Variables”, select “Path”, and click “Edit”. Add a new path string which corresponds to the path of the Postgres bin folder. For me, it was “C:\Program Files\PostgreSQL\13\bin”. (This folder contains the “psql.exe” file.) Now `psql -V`` should work in a new terminal window.
+If, after it’s been installed, and `psql -V` in the terminal returns `psql is not recognized as an internal command`, then Windows cannot find the executables because their location has not been added to the environment variables list. Go to “Edit the system environment variables” > Environment Variables > under “User Variables”, select “Path”, and click “Edit”. Add a new path string which corresponds to the path of the Postgres bin folder. For me, it was “C:\Program Files\PostgreSQL\13\bin”. (This folder contains the “psql.exe” file.) Now `psql -V` should work in a new terminal window.
 
 The default user is `postgres` and the password for this user is the password provided above, `testpassword`.
 Log in to postgres in the terminal using the following command: `psql -U postgres`
 Create a database using: `create database messagesdb;`
 Connect to the database using: `\c messagesdb;`
-Now run the sql script in the project folder. It creates a table to store the messages. Use:
-`\ir C:/MessagingRaspberryPiUsingPostgres/database.sql;` where the string is the absolute path to the sql script. (You can see the table’s contents using: `select \* from messages;`)
+Now, the SQL script in the project folder will create a table to store the messages. Run it using:
+`\ir C:/MessagingRaspberryPi/database.sql;` where the string is the absolute path to the sql script. (You can see the table’s contents using: `select \* from messages;`)
 
 ### Installing Node Modules
 
