@@ -19,7 +19,7 @@ Through the frontend of the site, the user can input a message, which gets store
    Set the password to "testpassword"
    Run on Port 5432
 4. Clone the repo
-   `sh git clone https://github.com/github_username/repo_name.git`
+   `sh git clone https://github.com/lkillora/MessagingRaspberryPi.git`
 
 ### Database Setup
 
